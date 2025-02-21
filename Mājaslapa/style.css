@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+}
+.galvene {
+    background-color: rgb(36, 77, 53);
+    padding: 70px;
+
+}
+.saturs {
+    background-color: rgb(255, 255, 255);
+    padding: 350px;
+}
+.pirmsnobeigums {
+    background-color: rgb(70, 70, 70);
+    padding: 50px;
+}
+.kajene {
+    background-color: rgb(24, 24, 24);
+    padding: 80px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+li {
+    display: inline;
+    flex-direction: row;
+  }
+  .navigacijasjosla {
+    display: block;
+    padding: 10px;
+    background-color: rgb(117, 161, 134);
+    position: relative;
+    left: 50px;
+  }
