@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+
+  header {
+    position: relative;
+    height: 110vh;
+    background-image: url('attēli/fons4.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  
+  .logo img{
+    width: 190px; 
+    height: auto;
+  }
+  
+  .nav-josla { /* izkārtojums */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-josla a { /* tieši par sākums, par mums ... */
+    text-decoration: none; /* noņem pasvītrojumu */
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    transition: color 0.3s; /*cik ātri nomainas virsrakstu krāsa uz oranžu*/
+  }
+  
+  .nav-josla a:hover {
+    color: #ff8c00; 
+  }
+  
+  .header-saturs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .header-saturs h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .header-saturs p {
+    margin-top: 10px; /*kāda atstarpe apaksvirsrakstam no lielā virsraksta*/
+    font-size: 18px;
+  }
+
+
+  h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 10px; /*cik tālu ir nākamais teksts*/
+  }
+  main {
+    padding: 70px; /*cik tuvu malai ir bloks*/
+    background-color: #ffffff; 
+}
+main div {
+    margin-bottom: 50px; /* Attālums starp katru divu */
+    padding: 20px;    /* Bloku lielums */
+    background-color: rgba(54, 50, 50, 0.777); 
+    border-radius: 8px;  /* Noapaļo stūrus */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.beigas {
+    padding: 40px;
+    background-color: #303030;
+    font-size: 14px;
+    color: #ffffff;
+}
+.jaunumu-bloki {
+    margin-bottom: 40px; /* Attālums starp katru divu */
+    padding: 30px;       /* Bloku lielums */
+    border-radius: 8px;  /* Noapaļo stūrus */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+#par-mums, #pakalpojumi, #pasākumi, #kontakti {
+    scroll-margin-top: 30px;
+}
+#kontakti p{
+    font-weight: bold;
+    font-size: 18px; 
+}
+#pakalpojumi h3{
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+
+
+
