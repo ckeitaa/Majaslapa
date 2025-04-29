@@ -20,7 +20,7 @@ const zirgaAtt = new Image();
 zirgaAtt.src = "attēli/zirgs.png";
 
 const sienaAtt = new Image();
-sienaAtt.src = "attēli/siens.png";     //zimets jauns attels, pec iepriekseja notirisanas
+sienaAtt.src = "attēli/siens.png";     //zimets jauns attels, tam pievienota bilde
 
 // izveido funkciju divu zīmējumu saskarei, divi attēlu mainīgie ar x un y
 function atteluSaskare(x1, y1, zirgsWidth, zirgsHeight, x2, y2, siensWidth, siensHeight) {
@@ -32,9 +32,9 @@ function atteluSaskare(x1, y1, zirgsWidth, zirgsHeight, x2, y2, siensWidth, sien
     return true;
 }
 
-function MyKeyDownHandler(MyEvent) { //tiek izpildits nosacijums, ar klaviaturas taustiniem var parvietor objektu
+function MyKeyDownHandler(MyEvent) { //izveidota funkcija, ka klaviaturas taustiniem var parvietot objektu
     if (MyEvent.keyCode == 37 && zirgs_x > 0) {
-        zirgs_x = zirgs_x - 10;
+        zirgs_x = zirgs_x - 10; //zirgs kustas pa kreisi
     }
     if (MyEvent.keyCode == 39 && zirgs_x + zirgsWidth < mansZimejums.width) { //lai neizietu ara no zimesanas laukuma
         zirgs_x = zirgs_x + 10;
@@ -67,12 +67,12 @@ function Laukums() {
 
     taimeris -= 1 / 40; // pa cik laiks iet uz prieksu (pa 3 sekundem uc)
 
-    zirgs_y = mansZimejums.height - zirgsHeight;
+    zirgs_y = mansZimejums.height - zirgsHeight; //lai zirgs neizietu ara no canvas laukumu, zirga y koordinata
 
-    ctx.drawImage(zirgaAtt, zirgs_x, zirgs_y, zirgsWidth, zirgsHeight);
+    ctx.drawImage(zirgaAtt, zirgs_x, zirgs_y, zirgsWidth, zirgsHeight); //zime zirgu
 
-    siens_y = siens_y + 6;
-    if (siens_y > mansZimejums.height) {
+    siens_y = siens_y + 6; //cik reizes siens kritis leja
+    if (siens_y > mansZimejums.height) {  //ja siens ir lielaks par canvas augstumu, siena y koordinata ir 0
         siens_y = 0;
 
         siens_x = Math.random() * (mansZimejums.width - siensWidth); //random vieta izvelas, kur krit objekts
